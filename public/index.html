@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Socket Basico</title>
+    <link rel="stylesheet" href="css/estail.css">
+  </head>
+  <body>
+    <input type="checkbox" id="btn-modal">
+	<label for="btn-modal" class="lbl-modal">¿Qué Hacer?</label>
+	<div class="modal">
+		<div class="contenedor">
+			<header>Instrucciones</header>
+			<label for="btn-modal">&times;</label>
+			<div class="contenido">
+				<h3 class="texto">Komda</h3>
+				<p class="texto">Elige tu nombre para poder empezar a chatear</p>
+        <input type="text" id="usuario" placeholder="Nombre" required class="campos">
+			</div>
+		</div>
+	</div>
+    <div id="card" class="cajita">
+      <div id="chat" class="chat">
+        <h1 class="texto">Chat:</h1>
+        <div id="notificaciones"></div>
+        <br>
+        <input type="text" id="mensaje" placeholder="Mensaje" required class="campos">
+        <br>
+        <button id="enviar"  value="Enviar" class="boton">Enviar</button>
+      </div>
+    </div>
+    <div id="salida"></div>
+    <script src="js/socket.io.js"></script>
+    <script src="js/logica.js" charset="utf-8"></script>
+    
+  </body>
+</html>

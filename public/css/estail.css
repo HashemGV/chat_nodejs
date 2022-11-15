@@ -1,0 +1,160 @@
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-image: url(../img/Earthbound\ wallpaper.png);
+    width: auto;
+    height: auto;
+    background-size: cover;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.chat{
+    background: rgba(255, 255, 255, 0);
+    width: 15%;
+    height: 10%;
+    margin-top: 6%;
+    box-shadow: 0 0.1em 0.1em rgba(0,0,0, 0.5);
+    padding: 10%;
+    align-items: center;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+.cajita{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto{
+    font-size: 30px;
+    text-shadow: gray 0.1em 0.1em 0.2em;
+    text-align: center;
+}
+
+.campos{
+    width: 80%;
+    height: 2em;
+    border: none;
+    border-bottom: 1px solid #7d96e8;
+    outline: none;
+    padding: 5px;
+    margin-bottom: 3em;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.campos:hover{
+    border-bottom: 1px solid #ffffff;
+}
+
+.boton{
+    background-color: #7d96e8;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    float: right;
+}
+
+.boton:hover{
+    background-color: #647bc5;
+}
+
+.escribiendo{
+    font-size: 18px;
+    text-shadow: gray 0.1em 0.1em 0.2em;
+    text-align: center;
+}
+ .mensaje{
+    background-color: #ffffff8f;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 0 0.1em 0.1em rgba(0,0,0, 0.5);
+    box-sizing: content-box, border-box;
+ }
+
+.modal{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#btn-modal:checked ~ .modal{
+	opacity: 1;
+	visibility: visible;
+} 
+
+.contenedor{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+	transform: translateY(-30%);
+}
+
+#btn-modal:checked ~ .modal .contenedor{
+	transform: translateY(0%);
+} 
+
+.contenedor header{
+	padding: 10px;
+	background: #db8046;
+	color: #fff;
+}
+
+.contenedor label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.contenido{
+	width: 100%;
+	padding: 10px; 
+}
+
+.contenido h3{
+	margin-bottom: 10px;
+}
+
+.contenido p{
+	margin-bottom: 7px;
+}
+
+#btn-modal{
+	display: none;
+}
+
+.lbl-modal{
+	background: #7d96e8;
+	padding: 10px 15px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.lbl-modal:hover{
+    background-color: #647bc5;
+}
+
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor{
+		width: 95%;
+	}
+}
